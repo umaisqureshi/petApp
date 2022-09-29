@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:lottie/lottie.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:pet_app/Screens/Auth/LoginScreen.dart';
 import 'package:pet_app/Screens/OnBoardingScreens/OnboardingScreen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -21,15 +22,15 @@ class _OnboardingScreenState extends State<SplashScreen>
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 5), (() {
+    Timer(const Duration(seconds: 6), (() {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const OnboardingScreen()));
+          MaterialPageRoute(builder: (context) => const LoginScreen()));
     }));
     animation = AnimationController(
       vsync: this,
-      duration: const Duration(seconds: 2),
+      duration: const Duration(seconds: 3),
     );
-    _fadeInFadeOut = Tween<double>(begin: 1.0, end: 0.5).animate(animation);
+    _fadeInFadeOut = Tween<double>(begin: 0.0, end: 1.0).animate(animation);
     animation.addStatusListener((status) {
       if (status == AnimationStatus.completed) {
         animation.reverse();
@@ -55,32 +56,42 @@ class _OnboardingScreenState extends State<SplashScreen>
         backgroundColor: Theme.of(context).primaryColor,
       ),
       backgroundColor: Theme.of(context).primaryColor,
-      body: Container(
-        color: Theme.of(context).primaryColor,
-        child: Column(
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.6,
-              child: Center(
-                child: Lottie.asset(
-                  fit: BoxFit.cover,
-                  'assets/splashScreen.json',
+      body: Column(
+        children: [
+          Column(
+            children: [
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.18,
+              ),
+              Center(
+                child: FadeTransition(
+                  opacity: _fadeInFadeOut,
+                  child: Text(
+                    "Pet App",
+                    style:
+                        GoogleFonts.nunito(color: Colors.white, fontSize: 50),
+                  ),
                 ),
               ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            FadeTransition(
-              opacity: _fadeInFadeOut,
-              child: Text(
-                "Pet App",
-                style: GoogleFonts.nunito(
-                    color: Color.fromARGB(255, 246, 246, 246), fontSize: 50),
+              const SizedBox(
+                height: 2,
               ),
-            )
-          ],
-        ),
+              Center(
+                child: Text(
+                  "Beautiful Friend Like Family",
+                  style: GoogleFonts.nunito(color: Colors.white, fontSize: 20),
+                ),
+              ),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.23,
+              ),
+            ],
+          ),
+          Lottie.asset(
+            fit: BoxFit.cover,
+            'assets/SplashLottie.json',
+          ),
+        ],
       ),
     );
   }

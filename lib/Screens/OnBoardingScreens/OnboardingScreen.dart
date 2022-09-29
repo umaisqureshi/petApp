@@ -27,7 +27,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 child: Text(
                   'Let\'s Find A New\nLovely Pet Or A Friends ',
                   style: GoogleFonts.nunito(
-                      color: Colors.black45,
+                      color: Theme.of(context).primaryColor,
                       fontSize: 20,
                       fontWeight: FontWeight.bold),
                   textAlign: TextAlign.left,
@@ -41,7 +41,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 child: Text(
                   'Now it\'s easier than ever to find a friend or a replacement for the family.',
                   style:
-                      GoogleFonts.nunito(color: Colors.black45, fontSize: 15),
+                      GoogleFonts.nunito(color: Colors.black54, fontSize: 15),
                   textAlign: TextAlign.left,
                 ),
               ),
