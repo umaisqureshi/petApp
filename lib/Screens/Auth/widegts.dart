@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pet_app/Screens/OnBoardingScreens/OnboardingScreen.dart';
+import 'package:pet_app/Screens/Auth/loginPage.dart';
+import 'package:pet_app/Screens/OnBoardingScreens/onboardingScreen.dart';
 
 class LogicScreenCardWidget extends StatelessWidget {
   const LogicScreenCardWidget({
@@ -55,8 +56,8 @@ class LogicScreenCardWidget extends StatelessWidget {
                 children: [
                   GestureDetector(
                     onTap: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => const OnboardingScreen()));
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const LoginScreen()));
                     },
                     child: Container(
                       color: Theme.of(context).primaryColor,
@@ -74,7 +75,10 @@ class LogicScreenCardWidget extends StatelessWidget {
                     ),
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (context) => const OnboardingScreen()));
+                    },
                     child: Container(
                       color: Colors.black,
                       width: MediaQuery.of(context).size.width * 0.461,
@@ -144,3 +148,23 @@ class LogicScreenCardWidget extends StatelessWidget {
     );
   }
 }
+
+InputDecoration inputDecorationTextField = InputDecoration(
+  focusColor: const Color(0xff49C2E1),
+  border: OutlineInputBorder(
+    borderSide: const BorderSide(color: Color(0xff49C2E1), width: 1.0),
+    borderRadius: BorderRadius.circular(15.0),
+  ),
+  enabledBorder: OutlineInputBorder(
+    borderSide: const BorderSide(color: Color(0xff49C2E1), width: 5.0),
+    borderRadius: BorderRadius.circular(15.0),
+  ),
+  focusedBorder: OutlineInputBorder(
+    borderSide: const BorderSide(color: Color(0xff49C2E1), width: 1.0),
+    borderRadius: BorderRadius.circular(15.0),
+  ),
+  fillColor: const Color(0xff49C2E1),
+  filled: true,
+  hintStyle: GoogleFonts.nunito(
+      color: Colors.white, fontSize: 14, fontWeight: FontWeight.bold),
+);

@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_app/Screens/Auth/Widegts.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+class MainLoginScreen extends StatefulWidget {
+  const MainLoginScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<MainLoginScreen> createState() => _MainLoginScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _MainLoginScreenState extends State<MainLoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pet_app/Screens/Home/HomePage.dart';
-import 'package:pet_app/Screens/Main/MainPage.dart';
+import 'package:pet_app/Screens/Home/homePage.dart';
+import 'package:pet_app/Screens/Main/mainPage.dart';
 import 'package:swipebuttonflutter/swipebuttonflutter.dart';
 
 class SwpieButton extends StatelessWidget {

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:pet_app/Screens/Auth/loginScreen.dart';
+import 'package:pet_app/Screens/Auth/loginPage.dart';
+import 'package:pet_app/Screens/Auth/mainLoginScreen.dart';
 
-import 'Screens/SplashScreen/SplashScreen.dart';
+import 'Screens/SplashScreen/splashScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {

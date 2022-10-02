@@ -1,7 +1,7 @@
 import 'package:line_icons/line_icon.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pet_app/Screens/Home/PetDetailPage.dart';
+import 'package:pet_app/Screens/Home/petDetailPage.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class SearchBarWidget extends StatelessWidget {

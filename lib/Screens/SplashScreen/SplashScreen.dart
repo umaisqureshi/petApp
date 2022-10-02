@@ -1,11 +1,9 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
-
 import 'package:lottie/lottie.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pet_app/Screens/Auth/LoginScreen.dart';
-import 'package:pet_app/Screens/OnBoardingScreens/OnboardingScreen.dart';
+import 'package:pet_app/Screens/Auth/mainLoginScreen.dart';
+import 'package:pet_app/Screens/OnBoardingScreens/onboardingScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -24,7 +22,7 @@ class _OnboardingScreenState extends State<SplashScreen>
     super.initState();
     Timer(const Duration(seconds: 6), (() {
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => const LoginScreen()));
+          MaterialPageRoute(builder: (context) => const MainLoginScreen()));
     }));
     animation = AnimationController(
       vsync: this,

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pet_app/Screens/Home/HomePage.dart';
-import 'package:pet_app/Screens/OnBoardingScreens/OnboardingScreen.dart';
+import 'package:pet_app/Screens/Home/homePage.dart';
+import 'package:pet_app/Screens/OnBoardingScreens/onboardingScreen.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
 
