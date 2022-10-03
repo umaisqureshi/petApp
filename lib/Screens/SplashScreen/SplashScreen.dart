@@ -41,8 +41,8 @@ class _OnboardingScreenState extends State<SplashScreen>
 
   @override
   void dispose() {
-    super.dispose();
     animation.dispose();
+    super.dispose();
   }
 
   @override

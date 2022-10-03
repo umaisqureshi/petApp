@@ -16,6 +16,20 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        drawer: const Drawer(),
+        appBar: AppBar(
+          title: const Text('Pet App'),
+          actions: [
+            IconButton(
+              onPressed: (() {}),
+              icon: Icon(
+                Icons.notifications_on_outlined,
+                color: Theme.of(context).primaryColor,
+                size: 25,
+              ),
+            ),
+          ],
+        ),
         resizeToAvoidBottomInset: true,
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 13.0),

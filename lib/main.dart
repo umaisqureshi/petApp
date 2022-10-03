@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pet_app/Screens/Auth/loginPage.dart';
 import 'package:pet_app/Screens/Auth/mainLoginScreen.dart';
+import 'package:pet_app/Screens/Auth/registerPage.dart';
 
 import 'Screens/SplashScreen/splashScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -33,8 +34,8 @@ class MyApp extends StatelessWidget {
               // backgroundColor: const Color.fromARGB(255, 114, 174, 117),
               centerTitle: true,
               elevation: 0,
-              titleTextStyle:
-                  GoogleFonts.nunito(color: Colors.black, fontSize: 25))),
+              titleTextStyle: GoogleFonts.nunito(
+                  color: Theme.of(context).primaryColor, fontSize: 25))),
       home: const SplashScreen(),
     );
   }

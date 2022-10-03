@@ -150,9 +150,10 @@ class _PetMainCardWidgetState extends State<PetMainCardWidget> {
                         Text(
                           widget.petName,
                           style: GoogleFonts.nunito(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
-                              color: Colors.black54),
+                            fontSize: 18,
+                            fontWeight: FontWeight.w700,
+                            color: Theme.of(context).primaryColor,
+                          ),
                         ),
                         Text(
                           widget.petBreed,
@@ -176,9 +177,9 @@ class _PetMainCardWidgetState extends State<PetMainCardWidget> {
                             ),
                             child: IconButton(
                               onPressed: () {},
-                              icon: const Icon(
+                              icon: Icon(
                                 Icons.phone_enabled_outlined,
-                                color: Colors.black38,
+                                color: Theme.of(context).primaryColor,
                               ),
                             ),
                           ),
@@ -196,9 +197,9 @@ class _PetMainCardWidgetState extends State<PetMainCardWidget> {
                             ),
                             child: IconButton(
                               onPressed: () {},
-                              icon: const Icon(
+                              icon: Icon(
                                 Icons.message,
-                                color: Colors.black38,
+                                color: Theme.of(context).primaryColor,
                               ),
                             ),
                           ),

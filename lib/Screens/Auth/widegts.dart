@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_app/Screens/Auth/loginPage.dart';
+import 'package:pet_app/Screens/Auth/registerPage.dart';
 import 'package:pet_app/Screens/OnBoardingScreens/onboardingScreen.dart';
 
 class LogicScreenCardWidget extends StatelessWidget {
@@ -77,7 +78,7 @@ class LogicScreenCardWidget extends StatelessWidget {
                   GestureDetector(
                     onTap: () {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => const OnboardingScreen()));
+                          builder: (context) => const RegisterScreen()));
                     },
                     child: Container(
                       color: Colors.black,

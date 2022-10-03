@@ -2,18 +2,19 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:pet_app/Screens/Auth/registerPage.dart';
+import 'package:pet_app/Screens/Auth/loginPage.dart';
 import 'package:pet_app/Screens/Auth/widegts.dart';
-import 'package:pet_app/Screens/OnBoardingScreens/onboardingScreen.dart';
 
-class LoginScreen extends StatefulWidget {
-  const LoginScreen({super.key});
+import '../OnBoardingScreens/onboardingScreen.dart';
+
+class RegisterScreen extends StatefulWidget {
+  const RegisterScreen({super.key});
 
   @override
-  State<LoginScreen> createState() => _LoginScreenState();
+  State<RegisterScreen> createState() => _RegisterScreenState();
 }
 
-class _LoginScreenState extends State<LoginScreen> {
+class _RegisterScreenState extends State<RegisterScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +24,7 @@ class _LoginScreenState extends State<LoginScreen> {
         decoration: const BoxDecoration(
             color: Colors.white,
             image: DecorationImage(
-                image: AssetImage("assets/loginPageImage.jpg"),
+                image: AssetImage("assets/registeredImage.jpg"),
                 opacity: 0.7,
                 fit: BoxFit.cover)),
         child: SingleChildScrollView(
@@ -33,11 +34,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 height: MediaQuery.of(context).size.height * 0.09,
               ),
               Opacity(
-                opacity: 0.9,
+                opacity: 0.8,
                 child: Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Container(
-                    height: MediaQuery.of(context).size.height * 0.7,
+                    height: MediaQuery.of(context).size.height * 0.75,
                     width: double.infinity,
                     decoration: const BoxDecoration(
                         color: Colors.white,
@@ -50,7 +51,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Center(
                           child: Text(
-                            "Hello Again!",
+                            "Welcome!",
                             style: GoogleFonts.nunito(
                                 color: Theme.of(context).primaryColor,
                                 fontSize: 20,
@@ -62,7 +63,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                         Center(
                           child: Text(
-                            "Welcome Back You've\n        Been Missed!",
+                            "Create an Account!",
                             style: GoogleFonts.nunito(
                                 // color: Theme.of(context).primaryColor,
                                 color: Colors.black45,
@@ -81,9 +82,25 @@ class _LoginScreenState extends State<LoginScreen> {
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold),
                             decoration: inputDecorationTextField.copyWith(
+                              hintText: "Full Name",
+                              prefixIcon: const Icon(
+                                Icons.person,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(15.0),
+                          child: TextFormField(
+                            style: GoogleFonts.nunito(
+                                color: Colors.white,
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold),
+                            decoration: inputDecorationTextField.copyWith(
                               hintText: "Email",
                               prefixIcon: const Icon(
-                                Icons.person_outline_rounded,
+                                Icons.email,
                                 color: Colors.white,
                               ),
                             ),
@@ -123,7 +140,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 )),
                             child: Center(
                               child: Text(
-                                "Sign In",
+                                "Sign Up",
                                 style: GoogleFonts.nunito(
                                     color: Colors.white,
                                     fontSize: 20,
@@ -138,19 +155,18 @@ class _LoginScreenState extends State<LoginScreen> {
                         RichText(
                             text: TextSpan(children: [
                           TextSpan(
-                            text: "Not a Member? ",
+                            text: "Already a Member? ",
                             style: GoogleFonts.nunito(
                                 color: Colors.black,
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold),
                           ),
                           TextSpan(
-                            text: "Register Now",
+                            text: "Login Now",
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 Navigator.of(context).push(MaterialPageRoute(
-                                    builder: (context) =>
-                                        const RegisterScreen()));
+                                    builder: (context) => const LoginScreen()));
                               },
                             style: GoogleFonts.nunito(
                                 color: Theme.of(context).primaryColor,

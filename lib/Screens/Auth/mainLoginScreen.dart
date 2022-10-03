@@ -11,6 +11,10 @@ class MainLoginScreen extends StatefulWidget {
 
 class _MainLoginScreenState extends State<MainLoginScreen> {
   @override
+  void dispose() {
+    super.dispose();
+  }
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(

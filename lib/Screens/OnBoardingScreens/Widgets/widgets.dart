@@ -16,6 +16,7 @@ class SwpieButton extends StatelessWidget {
       child: Align(
           alignment: Alignment.center,
           child: SwipingButton(
+            
             text: 'Swipe To Start',
             onSwipeCallback: () {
               Navigator.of(context).pushReplacement(

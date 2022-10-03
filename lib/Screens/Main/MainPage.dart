@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:pet_app/Screens/Chat/chat.dart';
+import 'package:pet_app/Screens/Favorite/favorite.dart';
 import 'package:pet_app/Screens/Home/homePage.dart';
 import 'package:pet_app/Screens/OnBoardingScreens/onboardingScreen.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:pet_app/Screens/Profile/profile.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -15,29 +18,15 @@ class _MainPageState extends State<MainPage> {
   int _selectedIndex = 0;
   static const List<Widget> _widgetOptions = <Widget>[
     HomePage(),
-    OnboardingScreen(),
-    HomePage(),
-    OnboardingScreen(),
+    FavoriteScreen(),
+    ChatScreen(),
+    ProfileScreen(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        drawer: const Drawer(),
-        appBar: AppBar(
-          title: const Text('Pet App'),
-          actions: [
-            IconButton(
-              onPressed: (() {}),
-              icon: const Icon(
-                Icons.notifications_on_outlined,
-                color: Colors.black,
-                size: 25,
-              ),
-            ),
-          ],
-        ),
         body: _widgetOptions.elementAt(_selectedIndex),
         bottomNavigationBar: Container(
           decoration: BoxDecoration(
@@ -57,7 +46,7 @@ class _MainPageState extends State<MainPage> {
                 rippleColor: Colors.grey[300]!,
                 hoverColor: Colors.grey[100]!,
                 gap: 8,
-                activeColor: Colors.green,
+                activeColor: Theme.of(context).primaryColor,
                 iconSize: 24,
                 padding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
