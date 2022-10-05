@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:pet_app/Screens/Home/petDetailPage.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:pet_app/Services/authServices.dart';
+
+import '../../Auth/loginPage.dart';
 
 class SearchBarWidget extends StatelessWidget {
   const SearchBarWidget({super.key});
@@ -39,16 +42,23 @@ class FilterButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height * 0.07,
-      width: MediaQuery.of(context).size.width * 0.2,
-      decoration: BoxDecoration(
-        color: Theme.of(context).primaryColor,
-        borderRadius: const BorderRadius.all(Radius.circular(50)),
-      ),
-      child: const Icon(
-        Icons.filter_alt,
-        color: Colors.white,
+    return GestureDetector(
+      onTap: () async {
+        await AuthService().signOut();
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => const LoginScreen()));
+      },
+      child: Container(
+        height: MediaQuery.of(context).size.height * 0.07,
+        width: MediaQuery.of(context).size.width * 0.2,
+        decoration: BoxDecoration(
+          color: Theme.of(context).primaryColor,
+          borderRadius: const BorderRadius.all(Radius.circular(50)),
+        ),
+        child: const Icon(
+          Icons.filter_alt,
+          color: Colors.white,
+        ),
       ),
     );
   }

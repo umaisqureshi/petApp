@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "401405963937",
+    "firebase_url": "https://gharelu-81b89-default-rtdb.firebaseio.com",
+    "project_id": "gharelu-81b89",
+    "storage_bucket": "gharelu-81b89.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401405963937:android:6dc736ac8f3969537b8ae0",
+        "android_client_info": {
+          "package_name": "com.example.pet_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401405963937-eq3kkjj3ni8k1oi1vgai8i2p36jaj7if.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pet_app",
+            "certificate_hash": "04c78d0ee921364a620ce46dba71fe87629e0d1d"
+          }
+        },
+        {
+          "client_id": "401405963937-t1de085hsu3nea5dtsjrp5an3a2bok86.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUqUIepkLz8-uWifyWjkBgRyBS5Jc9np0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401405963937-t1de085hsu3nea5dtsjrp5an3a2bok86.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
